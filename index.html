@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Send SMS</title>
+</head>
+<body>
+
+<h2>Send SMS</h2>
+
+<label>Số điện thoại:</label><br>
+<input type="tel" id="phone"><br><br>
+
+<label>Nội dung tin nhắn:</label><br>
+<textarea id="message"></textarea><br><br>
+
+<button onclick="sendSMS()">Send</button>
+
+<script>
+function sendSMS(){
+  let phone = document.getElementById("phone").value;
+  let message = encodeURIComponent(document.getElementById("message").value);
+
+  window.location.href = "sms:" + phone + "?body=" + message;
+}
+</script>
+
+</body>
+</html>
