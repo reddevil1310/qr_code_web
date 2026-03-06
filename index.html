@@ -21,7 +21,7 @@ body{
 .container{
   width:90%;
   max-width:420px;
-  background:url('logo_parlour.png') top/contain no-repeat,#fff;
+  background:#fff;
   padding:22px;
   border-radius:16px;
   box-shadow:0 10px 25px rgba(0,0,0,0.08);
@@ -87,15 +87,22 @@ button:active{
   transform:scale(0.98);
 }
 
+.header-img{
+  width:100%;
+  height:auto;
+  max-height:200px;
+  border-radius:10px;
+  margin-bottom:15px;
+}
+
 </style>
 </head>
 
 <body>
 
 <div class="container">
-
+<img class="header-img" src="logo_parlour.png">
 <div class="message-box" id="message"></div>
-
 <label>Phone number</label>
 <input type="tel" id="phone" placeholder="Enter phone number">
 
